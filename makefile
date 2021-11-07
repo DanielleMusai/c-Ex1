@@ -1,8 +1,9 @@
+
 CC=gcc
 AR=ar
 FLAGS= -Wall -g
-OBJECTS_REC= advancedClassifictionRecursive.o basicClassification.o
-OBJECTS_LOOPS=advancedClassifictionloop.o basicClassification.o
+OBJECTS_REC= advancedClassifictionRecursion.o basicClassifiction.o
+OBJECTS_LOOPS=advancedClassifictionloop.o basicClassifiction.o
 loops:libclassloops.a
 loopd:libclassloops.so
 recursives:libclassrec.a
