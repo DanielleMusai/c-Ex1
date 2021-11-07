@@ -10,7 +10,7 @@ int pw(int n, int m) // pow function
         num = num *n;
     }
     return num;
-}//palindrome
+}
 int isPl(int n, int end){
     int r;
     if (n!= 0){
@@ -29,15 +29,12 @@ int isPalindrome(int n){
      } 
     return flag;
 }
-//isARMSTRONG
 
-int sumOfDigit(int n){
-    int c=0;
-    for(int i=n;i>0;i=i/10){
-        c++;
-    }
-    return c;
-}
+
+
+
+
+
 
 int isArmstrong(int n){
     if(n==0)
@@ -64,5 +61,13 @@ s=s+pw(temp,num);
 return isArmstrong1(num,n1/10,sum,s);
 
 }
+}
+
+int sumOfDigit(int n){
+    int c=0;
+    for(int i=n;i>0;i=i/10){
+        c++;
+    }
+    return c;
 }
 
