@@ -1,4 +1,4 @@
-#include "Numclass.h"
+ #include "Numclass.h"
  #include <stdio.h>
  
 
@@ -7,10 +7,10 @@ int isPrime(int n) {
   // 0 is false
   // 1 is true 
   int i;
-  int flag=0;  
- if(n==1){
-  return 1;
- }
+  int flag=0; 
+  if(n==1){
+    return 1;
+  }    
 for(i=2;i<=n/2;i++)    
 {    
 if(n%i==0)    {    
@@ -32,13 +32,12 @@ return 0;
       
 }  
     int isStrong(int n){ 
-      int flag=0; 
-     int k=n;  
-     int r, sum=0;  
-     while(k!=0){  
-        r=k%10;  
-        int f=assem(r);  
-        k=k/10;  
+      int flag=0, num=n;  
+     int sum=0;  
+     while(num!=0){  
+        int temp=num%10;  
+        int f=assem(temp);  
+        num=num/10;  
        sum=sum+f;  
     }  
     if(sum==n) {
