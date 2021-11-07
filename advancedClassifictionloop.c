@@ -6,8 +6,9 @@
  int pw (int n, int m);// pow function
 //palindrome
 int isPalindrome(int n){
-  int r,end=0,start;  
-  int flag =0;     
+int r,end=0;
+int start;  
+int flag =0;     
 start=n;    
 while(start!=0){    
 r=start%10;    
@@ -28,7 +29,7 @@ int pw(int n, int m) // pow function
         num = num *n;
     }
     return num;
-
+}
  int isArmstrong(int n){
    int  n2, n1, countpow = 0;
    int flag=0;
@@ -46,4 +47,3 @@ int pw(int n, int m) // pow function
 }
 return flag;
 }   
-}
