@@ -10,7 +10,7 @@ int pw(int n, int m) // pow function
         num = num *n;
     }
     return num;
-}
+}//palindrome
 int isPl(int n, int end){
     int r;
     if (n!= 0){
@@ -29,71 +29,40 @@ int isPalindrome(int n){
      } 
     return flag;
 }
+//isARMSTRONG
+
+int sumOfDigit(int n){
+    int c=0;
+    for(int i=n;i>0;i=i/10){
+        c++;
+    }
+    return c;
+}
+
 int isArmstrong(int n){
-    int temp =n;
-    if(temp==0)
+    if(n==0)
     {
         return 0;
     }
-    int size=Count(n);
-    int x=n;
-    int w=0;
-    return isArmstrong1(size,n,x,w);
+    int num=sumOfDigit(n);
+    int sum=n, flag=0;
+    return isArmstrong1(num,n,sum,flag);
 }
 
-int isArmstrong1(int size,int n,int x,int s){
-int b=0;
-int v=n;
-int t;
-if(n==0&&x==s){
-    b=1;
-    return b;
-}else if(n==0&&x!=s){
-    return b;
-}else{
-t=v%10;
-s=s+pw(t,size);
-return isArmstrong1(size,v/10,x,s);
+int isArmstrong1(int num,int n,int sum,int s){
+int flag=0,n1=n;
+ if(n==0&&sum!=s){
+    return flag;
+}
+if(n==0&&sum==s){
+    flag=1;
+    return flag;
+}
+else{
+int temp=n1%10;
+s=s+pw(temp,num);
+return isArmstrong1(num,n1/10,sum,s);
 
 }
 }
-
-int Count(int n){
-    int count=0;
-    int i;
-    for(i=n;i>0;i=i/10){
-        count++;
-    }
-    return count;
-}
-
-// int isArmstrong(int n){
-//     if()
-// }
-//  int isArmstrong11(int n){
-//     int flag = 0, countpow, n1, result;
-//     int n2 = n;
-//     int t;
-//     if (n2!=0)
-//     {
-//         flag=1;
-//         n2 = n2 /10;
-//     }
-    
-//     if (n < 0)
-//     {
-//         return 0;
-//     }
-//     if (n == 0 && n1 == result)
-//     {
-//         flag = 1;
-       
-//     }
-//     else
-//     {
-//         t = n2 % 10;
-//         result = result + pw(t, countpow);
-//         return isArmstrong(n2 / 10);
-//     }
-// }
 
