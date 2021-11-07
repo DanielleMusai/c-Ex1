@@ -3,7 +3,7 @@ An Example for Armstrong num: 407  = 43 + 03 + 73  = 64 + 0 + 343  = 407
 */ 
 int isArmstrong(int n);
 int isArmstrong1(int size,int n,int x,int s);
-int Count(int n);
+int sumOfDigit(int n);
 
 
 /* will return if a number is a palindrome */  
